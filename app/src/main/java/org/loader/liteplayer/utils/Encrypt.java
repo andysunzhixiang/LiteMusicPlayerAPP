@@ -1,8 +1,6 @@
 package org.loader.liteplayer.utils;
 
-/**
- * 加密
- */
+
 public class Encrypt {
 	public synchronized static String md5(String str) {
 		try {

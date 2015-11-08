@@ -37,7 +37,7 @@
                 android:gravity="center_horizontal"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
-                android:text="@string/favourite_songs_list"
+                android:text="@string/search_songs_list"
                 android:textColor="@color/main_dark" />
         </org.loader.liteplayer.ui.Indicator>
 

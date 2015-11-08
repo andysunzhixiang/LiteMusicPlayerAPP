@@ -187,13 +187,13 @@ containing a value of this type.
         public static final int delete_dialog_title=0x7f090003;
         public static final int dialog_cancel=0x7f090004;
         public static final int dialog_ok=0x7f090005;
-        public static final int favourite_songs_list=0x7f090006;
-        public static final int go_back=0x7f090007;
-        public static final int hello_world=0x7f090008;
-        public static final int local_songs_list=0x7f090009;
-        public static final int minimize=0x7f09000a;
-        public static final int quit=0x7f09000b;
-        public static final int research=0x7f09000c;
+        public static final int go_back=0x7f090006;
+        public static final int hello_world=0x7f090007;
+        public static final int local_songs_list=0x7f090008;
+        public static final int minimize=0x7f090009;
+        public static final int quit=0x7f09000a;
+        public static final int research=0x7f09000b;
+        public static final int search_songs_list=0x7f09000c;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

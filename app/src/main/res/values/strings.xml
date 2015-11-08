@@ -7,7 +7,7 @@
 
 
     <string name="local_songs_list">Songs</string>
-    <string name="favourite_songs_list">Favourite</string>
+    <string name="search_songs_list">Search</string>
 
     <string name="delete_dialog_title">DELETE MUSIC</string>
     <string name="delete_dialog_text">Confirm to delete this song?</string>

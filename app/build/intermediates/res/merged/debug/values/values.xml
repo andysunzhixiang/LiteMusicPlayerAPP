@@ -18,13 +18,13 @@
     <string name="delete_dialog_title">DELETE MUSIC</string>
     <string name="dialog_cancel">Cancel</string>
     <string name="dialog_ok">OK</string>
-    <string name="favourite_songs_list">Favourite</string>
     <string name="go_back">Return</string>
     <string name="hello_world">Hello world!</string>
     <string name="local_songs_list">Songs</string>
     <string name="minimize">Minimize</string>
     <string name="quit">Quit</string>
     <string name="research">Research</string>
+    <string name="search_songs_list">Search</string>
     <!-- From: file:/Users/sunzhixiang/Desktop/Androider/WorkSpace/MusicPlayerAPP%2020151104/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">

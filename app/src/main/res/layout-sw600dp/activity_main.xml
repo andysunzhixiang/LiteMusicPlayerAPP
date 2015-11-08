@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/fragment_songs"
-        android:name="org.loader.liteplayer.fragment.PlayFragment"
+        android:name="org.loader.liteplayer.activity.PlayActivity"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="2"

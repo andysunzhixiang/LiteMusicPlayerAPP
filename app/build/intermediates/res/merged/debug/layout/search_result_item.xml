@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"
-            android:text="未知艺术家"
+            android:text="Unknown artist"
             android:textColor="@android:color/darker_gray"
             android:textSize="12sp" />
 
@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"
-            android:text="未知专辑"
+            android:text="Unknown Album"
             android:textColor="@android:color/darker_gray"
             android:textSize="12sp" />
     </LinearLayout>

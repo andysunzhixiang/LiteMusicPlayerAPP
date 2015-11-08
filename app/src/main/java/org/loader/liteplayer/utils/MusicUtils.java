@@ -5,18 +5,23 @@ import java.util.ArrayList;
 
 import org.loader.liteplayer.application.App;
 import org.loader.liteplayer.pojo.Music;
+import org.loader.liteplayer.pojo.SearchResult;
 
 import android.os.Environment;
 
 public class MusicUtils {
-	// 存放歌曲列表
+	// Music　List
 	public static ArrayList<Music> sMusicList = new ArrayList<Music>();
 
+	public static ArrayList<SearchResult> sSearchResultList = new ArrayList<SearchResult>();
+
 	public static void initMusicList() {
-		// 获取歌曲列表
+		// Get Music List
 		sMusicList.clear();
 		sMusicList.addAll(LocalMusicUtils.queryMusic(getBaseDir()));
 	}
+
+
 
 	/**
 	 * get root path of SD card
@@ -34,7 +39,7 @@ public class MusicUtils {
 	}
 
 	/**
-	 * 获取应用程序使用的本地目录
+	 * Get App local dir
 	 * @return
 	 */
 	public static String getAppLocalDir() {
@@ -51,7 +56,7 @@ public class MusicUtils {
 	}
 
 	/**
-	 * 获取音乐存放目录
+	 * Get Music Dir
 	 * @return
 	 */
 	public static String getMusicDir() {
@@ -60,7 +65,7 @@ public class MusicUtils {
 	}
 
 	/**
-	 * 获取歌词存放目录
+	 * Get Lrc Dir
 	 * 
 	 * @return
 	 */
@@ -70,7 +75,7 @@ public class MusicUtils {
 	}
 
 	/**
-	 * 创建文件夹
+	 * Make a dir
 	 * @param dir
 	 * @return
 	 */

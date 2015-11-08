@@ -1,6 +1,5 @@
 package org.loader.liteplayer.activity;
 
-//import org.loader.liteplayer.service.DownloadService;
 import org.loader.liteplayer.service.PlayService;
 import org.loader.liteplayer.utils.L;
 
@@ -15,7 +14,6 @@ import android.support.v4.app.FragmentActivity;
 
 public abstract class BaseActivity extends FragmentActivity {
 	protected PlayService mPlayService;
-    //protected DownloadService mDownloadService;
 	private final String TAG = BaseActivity.class.getSimpleName();
 	
 	private ServiceConnection mPlayServiceConnection = new ServiceConnection() {
@@ -32,19 +30,9 @@ public abstract class BaseActivity extends FragmentActivity {
 			onChange(mPlayService.getPlayingPosition());
 		}
 	};
-	
-//	private ServiceConnection mDownloadServiceConnection = new ServiceConnection() {
-//		@Override
-//		public void onServiceDisconnected(ComponentName name) {
-//			L.l(TAG, "download--->onServiceDisconnected");
-//			mDownloadService = null;
-//		}
-//
-//		@Override
-//		public void onServiceConnected(ComponentName name, IBinder service) {
-//			mDownloadService = ((DownloadService.DownloadBinder) service).getService();
-//		}
-//	};
+
+
+
 	
 	/**
 	 * PlayService callback interface class

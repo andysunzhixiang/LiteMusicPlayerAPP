@@ -137,6 +137,9 @@ public class LocalFragment extends Fragment implements OnClickListener {
 
 	}
 
+	/**
+	 * Long click to delete music
+	 */
 	private OnItemLongClickListener mItemLongClickListener = 
 			new OnItemLongClickListener() {
 		@Override

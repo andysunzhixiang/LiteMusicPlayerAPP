@@ -7,7 +7,7 @@ public class Music {
 	private String title;
 	private String uri;
 	private int length; // duration
-	private String image; // icon
+	private String image;
 	private String artist;
 
 

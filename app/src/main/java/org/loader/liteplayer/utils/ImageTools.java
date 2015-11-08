@@ -11,7 +11,7 @@ import android.graphics.PorterDuffXfermode;
 
 public class ImageTools {
 	/**
-	 * 缩放图片
+	 * scale Bitmap image
 	 * @param bmp
 	 * @return
 	 */
@@ -20,7 +20,7 @@ public class ImageTools {
 	}
 	
 	/**
-	 * 缩放图片
+	 * scale Bitmap image
 	 * @param bmp
 	 * @param size
 	 * @return
@@ -30,7 +30,7 @@ public class ImageTools {
 	}
 	
 	/**
-	 * 根据文件uri缩放图片
+	 * scale Bitmap image by uri
 	 * @param uri
 	 * @return
 	 */
@@ -39,7 +39,7 @@ public class ImageTools {
 	}
 	
 	/**
-	 * 根据文件uri缩放图片
+	 * scale Bitmap image
 	 * @param uri
 	 * @return
 	 */
@@ -48,7 +48,7 @@ public class ImageTools {
 	}
 	
 	/**
-	 * 缩放资源图片
+	 * scale Bitmap image
 	 * @param res
 	 * @return
 	 */
@@ -58,7 +58,7 @@ public class ImageTools {
 	}
 	
 	/**
-	 * 创建圆形图片
+	 * create Circle Bitmap
 	 * @deprecated
 	 * @param src
 	 * @return

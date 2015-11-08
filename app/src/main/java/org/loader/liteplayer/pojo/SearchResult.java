@@ -2,7 +2,6 @@ package org.loader.liteplayer.pojo;
 
 import java.io.Serializable;
 
-
 public class SearchResult implements Serializable {
 	private static final long serialVersionUID = 0X00000001l;
 	private String musicName;

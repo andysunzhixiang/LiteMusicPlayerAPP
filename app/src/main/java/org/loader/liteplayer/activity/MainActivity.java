@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import org.loader.liteplayer.R;
 import org.loader.liteplayer.fragment.LocalFragment;
-import org.loader.liteplayer.fragment.FavouriteFragment;
+import org.loader.liteplayer.fragment.NetSearchFragment;
 import org.loader.liteplayer.service.PlayService;
 import org.loader.liteplayer.ui.Indicator;
 import org.loader.liteplayer.ui.ScrollRelativeLayout;
@@ -128,10 +128,10 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 	
 	private void initFragments() {
 		LocalFragment localFragment = new LocalFragment();
-		FavouriteFragment favouriteFragment = new FavouriteFragment();
-		
+		NetSearchFragment netSearchFragment = new NetSearchFragment();
+
 		mFragments.add(localFragment);
-		mFragments.add(favouriteFragment);
+		mFragments.add(netSearchFragment);
 	}
 	
 	/**
@@ -154,8 +154,9 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 	
 	@Override
 	public void onPublish(int progress) {
-		// 如果当前显示的fragment是音乐列表fragment
-		// 则调用fragment的setProgress设置进度
+
+		// if current fragment is local fragment
+		// call fragment's setProgress() method.
 		if(mViewPager.getCurrentItem() == 0) {
 			((LocalFragment)mFragments.get(0)).setProgress(progress);
 		}

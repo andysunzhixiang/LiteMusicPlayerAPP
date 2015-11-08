@@ -18,7 +18,6 @@ public class SearchResultAdapter extends BaseAdapter {
 	public SearchResultAdapter(ArrayList<SearchResult> searchResult) {
 		mSearchResult = searchResult;
 	}
-	
 	@Override
 	public int getCount() {
 		return mSearchResult.size();
@@ -54,10 +53,10 @@ public class SearchResultAdapter extends BaseAdapter {
 		holder.title.setText(mSearchResult.get(position).getMusicName());
 		
 		if(!TextUtils.isEmpty(artist)) holder.artist.setText(artist);
-		else holder.artist.setText("未知艺术家");
+		else holder.artist.setText("Unknown artist");
 		
 		if(!TextUtils.isEmpty(album)) holder.album.setText(album);
-		else holder.album.setText("未知专辑");
+		else holder.album.setText("Unknown Album");
 		return convertView;
 	}
 	

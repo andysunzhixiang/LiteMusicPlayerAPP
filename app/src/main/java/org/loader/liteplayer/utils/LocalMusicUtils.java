@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import org.loader.liteplayer.application.App;
 import org.loader.liteplayer.pojo.Music;
+import org.loader.liteplayer.pojo.SearchResult;
 
 import android.database.Cursor;
 import android.net.Uri;
@@ -34,8 +35,40 @@ public class LocalMusicUtils {
 		return result;
 	}
 
+	public static ArrayList<SearchResult> queryResult(String dirName) {
+		ArrayList<SearchResult> results = new ArrayList<SearchResult>();
+		Cursor cursor = App.sContext.getContentResolver().query(
+				MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, null,
+				MediaStore.Audio.Media.DATA + " like ?",
+				new String[] { dirName + "%" },
+				MediaStore.Audio.Media.DEFAULT_SORT_ORDER);
+		if(cursor == null) return results;
+
+		// id title singer data time image
+		SearchResult result;
+		for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
+			// If is not music
+			String isMusic = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.IS_MUSIC));
+			if (isMusic != null && isMusic.equals("")) continue;
+
+			String title = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.TITLE));
+			String artist = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST));
+			String album = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ALBUM));
+			if(isRepeat(title, artist)) continue;
+
+			result = new SearchResult();
+			result.setMusicName(title);
+			result.setArtist(artist);
+			result.setAlbum(album);
+			results.add(result);
+		}
+
+		cursor.close();
+		return results;
+	}
+
 	/**
-	 * 获取目录下的歌曲
+	 * Get all musics under dir
 	 * @param dirName
 	 */
 	public static ArrayList<Music> queryMusic(String dirName) {
@@ -50,7 +83,7 @@ public class LocalMusicUtils {
 		// id title singer data time image
 		Music music;
 		for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-			// 如果不是音乐
+			// If is not music
 			String isMusic = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.IS_MUSIC));
 			if (isMusic != null && isMusic.equals("")) continue;
 			
@@ -74,12 +107,12 @@ public class LocalMusicUtils {
 	}
 	
 	/**
-	 * 根据音乐名称和艺术家来判断是否重复包含了
+	 * Judge whether is repeat by Name and Artist
 	 * @param title
 	 * @param artist
 	 * @return
 	 */
-	private static boolean isRepeat(String title, String artist) {
+	public static boolean isRepeat(String title, String artist) {
 		for(Music music : MusicUtils.sMusicList) {
 			if(title.equals(music.getTitle()) && artist.equals(music.getArtist())) {
 				return true;
@@ -89,7 +122,7 @@ public class LocalMusicUtils {
 	}
 
 	/**
-	 * 根据歌曲id获取图片
+	 * Get Image by id
 	 * @param albumId
 	 * @return
 	 */

@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.loader.liteplayer.ui.ScrollRelativeLayout
+        android:id="@+id/rl_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF1F1F1"
+        tools:context=".MainActivity" >
+
+        <org.loader.liteplayer.ui.Indicator
+            xmlns:indicator="http://schemas.android.com/apk/res/org.loader.liteplayer"
+            android:id="@+id/main_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            indicator:color="@color/main"
+            indicator:height="2dp" >
+
+            <TextView
+                android:id="@+id/tv_main_local"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/local_songs_list" />
+
+            <TextView
+                android:id="@+id/tv_main_favourite"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/favourite_songs_list"
+                android:textColor="@color/main_dark" />
+        </org.loader.liteplayer.ui.Indicator>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_main_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_indicator"
+            android:overScrollMode="never" />
+    </org.loader.liteplayer.ui.ScrollRelativeLayout>
+</FrameLayout><!-- From: file:/Users/sunzhixiang/Desktop/Androider/WorkSpace/MusicPlayerAPP%2020151104/app/src/main/res/layout/activity_main.xml -->

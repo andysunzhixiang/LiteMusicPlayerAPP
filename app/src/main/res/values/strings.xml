@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MusicPlayer</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+
+    <string name="local_songs_list">Songs</string>
+    <string name="favourite_songs_list">Favourite</string>
+
+    <string name="delete_dialog_title">DELETE MUSIC</string>
+    <string name="delete_dialog_text">Confirm to delete this song?</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="research">Research</string>
+    <string name="minimize">Minimize</string>
+    <string name="quit">Quit</string>
+    <string name="go_back">Return</string>
+
+</resources>

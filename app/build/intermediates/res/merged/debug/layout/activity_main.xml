@@ -48,4 +48,4 @@
             android:layout_below="@id/main_indicator"
             android:overScrollMode="never" />
     </org.loader.liteplayer.ui.ScrollRelativeLayout>
-</FrameLayout><!-- From: file:/Users/sunzhixiang/Desktop/Androider/WorkSpace/MusicPlayerAPP%2020151104/app/src/main/res/layout/activity_main.xml -->
+</FrameLayout><!-- From: file:/C:/Users/AndySun/Documents/Upload%20To%20Github/LiteMusicPlayerAPP/app/src/main/res/layout/activity_main.xml -->

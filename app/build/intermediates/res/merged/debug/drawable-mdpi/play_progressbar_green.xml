@@ -7,4 +7,4 @@
     <item android:id="@+android:id/progress">
         <clip android:drawable="@drawable/play_activity_progressbar_green" />
     </item>
-</layer-list><!-- From: file:/Users/sunzhixiang/Desktop/Androider/WorkSpace/MusicPlayerAPP%2020151104/app/src/main/res/drawable-mdpi/play_progressbar_green.xml -->
+</layer-list><!-- From: file:/C:/Users/AndySun/Documents/Upload%20To%20Github/LiteMusicPlayerAPP/app/src/main/res/drawable-mdpi/play_progressbar_green.xml -->
